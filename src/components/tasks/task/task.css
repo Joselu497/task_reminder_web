@@ -1,0 +1,31 @@
+.task-card {
+	margin: 0.2em;
+}
+
+.task-card:hover {
+	transform: scale(1.03);
+	transition: transform 0.3s ease;
+}
+
+.task-header:hover {
+	cursor: pointer;
+}
+
+.task-header-title {
+	display: flex;
+	justify-content: space-between;
+}
+
+.task-title {
+	width: 22em;
+}
+
+.task-content {
+	overflow-wrap: break-word;
+}
+
+.task-buttons {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}

@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Task Reminder Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description:
+This project is a frontend web application built using React that interacts with the backend API provided by the Task Reminder project. The frontend allows users to create, update, assign, and manage tasks efficiently through a user-friendly interface.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Functional Requirements:
+1. **User Authentication:**
+   - Users should be able to register, log in, and manage their accounts securely.
+   - User authentication should be handled by the backend API.
 
-### `yarn start`
+2. **Task Management:**
+   - Users can create, update, delete tasks.
+   - Tasks can be assigned to specific users.
+   - Tasks should have deadlines and priorities.
+   - Users can mark tasks as completed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **API Integration:**
+   - The frontend application should integrate with the backend API to manage tasks.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **Data Validation:**
+   - Input data should be validated to ensure consistency and integrity.
 
-### `yarn test`
+5. **Error Handling:**
+   - Proper error messages and status codes should be returned for invalid requests.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+## Non-Functional Requirements:
+1. **Performance:**
+   - Ensure efficient data transfer between the frontend and backend.
+   - Optimize frontend performance for speed and scalability.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Security:**
+   - Implement secure communication between the frontend and backend.
+   - Protect sensitive data and endpoints from unauthorized access.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Documentation:**
+   - Provide clear and comprehensive frontend documentation for developers to understand the application's structure and functionality.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Testing:**
+   - Conduct thorough testing of the frontend application, including unit tests and integration tests.
 
-### `yarn eject`
+5. **Scalability:**
+   - Design the frontend to be scalable to handle increased traffic and data volume.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started:
+1. Clone the repository.
+2. Install dependencies using `yarn install`.
+3. Set up the frontend configurations in `src/index.js`.
+4. Run the frontend development server using `yarn start`.
+5. Access the frontend application at `http://localhost:3000/`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+For detailed frontend usage instructions, refer to the full documentation provided in the project repository.

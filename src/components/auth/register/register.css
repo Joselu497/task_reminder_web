@@ -1,0 +1,59 @@
+.register-container {
+    position: relative;
+}
+
+.register-box {
+    display: flex;
+    flex-direction: column; 
+    margin: 5em auto;
+    padding: 1em 3em 1em;
+    width: 28em;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.register-banner {
+    margin: 2em auto 0;
+    display: flex;
+    align-items: center;
+}
+
+.register-inputs {
+    margin: 2em 0;
+}
+
+.register-button {
+    display: flex;
+    justify-content: flex-end; 
+    margin: 1em 0 0;
+    gap: 2em;
+}
+
+.left-screen {
+    position: absolute;
+    width: 25%;
+    height: 100vh;
+    background-image: linear-gradient(to right, #00e676, #7eebab);
+    transform: skew(-10deg);
+    transform-origin: top left;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+}
+
+@media (max-width: 600px) {
+    .register-box {
+        margin: 0;
+        padding: 1em 6em;
+        min-width: auto;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .register-inputs {
+        margin: 4em 0;
+    }
+}

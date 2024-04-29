@@ -1,0 +1,74 @@
+.login-container {
+    display: flex;
+}
+
+.login-box {
+    display: flex;
+    flex-direction: column; 
+    margin: 5em 8em auto auto;
+    padding: 1em 3em 1em;
+    min-width: 26em;
+}
+
+.login-banner {
+    margin: 2em auto;
+    display: flex;
+    align-items: center;
+}
+
+.login-inputs {
+    margin: 2em 0;
+}
+
+.login-button {
+    margin: 3em auto 0.5em;
+}
+
+.register-link {
+    margin: 0.5em auto 0.5em;
+}
+
+.left-login-screen {
+    width: 55%;
+    height: 100vh;
+    background-image: linear-gradient(to right, #00e676, #7eebab);
+    transform: skew(-10deg);
+    transform-origin: top left;
+    position: relative;
+    overflow: hidden;
+}
+
+.app-name {
+    position: absolute;
+    padding-left: 0.5em;
+    top: 35%;
+    left: 35%;
+    transform: skew(10deg);
+    transform-origin: top left;
+    border-left: 2px solid #fff; 
+}
+
+@media (max-width: 600px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .left-login-screen {
+        width: auto;
+        height: 15vh;
+        transform: skew(0deg);
+    }
+
+    .login-box {
+        margin: 0;
+        padding: 1em 6em;
+        min-width: auto;
+        width: 100%;
+        height: 85vh;
+    }
+
+    .app-name {
+        top: 3em;
+        transform: translate(-50%, -50%) skew(0deg);
+    }
+}

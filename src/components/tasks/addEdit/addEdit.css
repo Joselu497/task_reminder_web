@@ -1,0 +1,38 @@
+.add-task-dialog {
+    margin: auto;
+}
+
+.add-task-box {
+    display: flex;
+    flex-direction: column; 
+    padding: 1em 3em;
+    max-width: 30em;
+}
+
+.add-task-banner {
+    margin: 1em auto 0;
+    display: flex;
+    align-items: center;
+}
+
+.add-task-inputs {
+    margin: 1em auto 0;
+    width: 24em;
+}
+
+.task-date-time-picker {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+.date-picker {
+    margin-right: 0.2em;
+    grid-column: 1;
+}
+
+.add-task-button {
+    display: flex;
+    justify-content: flex-end; 
+    margin: 0.5em auto 0;
+    gap: 2em;
+}

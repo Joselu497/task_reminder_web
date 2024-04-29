@@ -1,0 +1,8 @@
+.required-input {
+    width: 100%;
+}
+
+.error-message {
+    position: absolute;
+    top: 4em;
+}

@@ -1,0 +1,12 @@
+.priority-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.priority-label {
+    margin-left: 1em;
+}
+.priority-rating {
+    margin: auto;
+}
