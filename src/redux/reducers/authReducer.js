@@ -31,7 +31,7 @@ export const authSlice = createSlice({
       localStorage.setItem("currentUser", JSON.stringify(action.payload.user));
       state.currentUser = localStorage.getItem("currentUser");
       state.authenticated = true;
-      state.isAdmin = JSON.stringify(action.payload.user.isAdmin);
+      state.isAdmin = JSON.stringify(action.payload.user.is_admin);
     },
     /**
      * The logout reducer.

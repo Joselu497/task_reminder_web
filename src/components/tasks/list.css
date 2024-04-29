@@ -81,9 +81,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-    /* .calendar-box {
-        display: none;
-    } */
     .folders {
         display: none;
     }
@@ -95,8 +92,6 @@
 @media only screen and (max-width: 900px) {
     .tasks-container {
         display: flex;
-        /* grid-template-columns: 30% 70%;
-        place-content: center; */
     }
     .calendar-box {
         display: none;
