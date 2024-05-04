@@ -7,7 +7,7 @@ import React, {
 } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { logout } from "../../redux/reducers/authReducer";
+import { onLogout } from "../../utils/logout";
 import { getTasks, deleteTask, completeTask } from "../../api/tasks";
 import Task from "./task/task";
 import { toast } from "react-toastify";
@@ -85,15 +85,14 @@ const Tasks = () => {
       setTasks(tasksData);
     } catch (error) {
       if (error.response && error.response.status === 401) {
-        dispatch(logout());
-        navigate("/login");
+        onLogout(navigate, dispatch);
       } else {
         toast.error("Error al cargar tareas.");
       }
     }
   }, [
-    dispatch,
     navigate,
+    dispatch,
     searchContext.searchData,
     order,
     limit,
@@ -141,10 +140,14 @@ const Tasks = () => {
           results: prevTasks?.results.filter((task) => task.id !== taskId),
         }));
       } catch (error) {
+        if (error.response && error.response.status === 401) {
+          onLogout(navigate, dispatch);
+        } else {
         toast.error("Error al eliminar tarea.");
+        }
       }
     },
-    [setTasks]
+    [setTasks, navigate, dispatch]
   );
 
   /**

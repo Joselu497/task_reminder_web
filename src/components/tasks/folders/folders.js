@@ -13,7 +13,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import Typography from "@mui/material/Typography";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { logout } from "../../../redux/reducers/authReducer";
+import { onLogout } from "../../../utils/logout";
 import Folder from "./folder/folder";
 import { useSelector } from "react-redux";
 import {
@@ -62,8 +62,7 @@ const Folders = ({ handleFolder }) => {
       setFolders(foldersData);
     } catch (error) {
       if (error.response && error.response.status === 401) {
-        dispatch(logout());
-        navigate("/login");
+        onLogout(navigate, dispatch);
       } else {
         toast.error("Error al cargar carpetas.");
       }
@@ -121,10 +120,14 @@ const Folders = ({ handleFolder }) => {
           }
         });
       } catch (error) {
-        toast.error(`Error al ${id ? "editar" : "crear"} carpeta.`);
+        if (error.response && error.response.status === 401) {
+          onLogout(navigate, dispatch);
+        } else {
+          toast.error(`Error al ${id ? "editar" : "crear"} carpeta.`);
+        }
       }
     },
-    [currentUser.id]
+    [currentUser.id, navigate, dispatch]
   );
 
   /**
@@ -144,13 +147,17 @@ const Folders = ({ handleFolder }) => {
           }));
           handleSelectFolder(0);
         } catch (error) {
-          toast.error("Error al eliminar carpeta.");
+          if (error.response && error.response.status === 401) {
+            onLogout(navigate, dispatch);
+          } else {
+            toast.error("Error al eliminar carpeta.");
+          }
         }
       } else {
         setNewFolderFormOpen(false);
       }
     },
-    [setFolders, handleSelectFolder]
+    [setFolders, handleSelectFolder, navigate, dispatch]
   );
 
   /**
@@ -182,7 +189,7 @@ const Folders = ({ handleFolder }) => {
         </Box>
       ) : (
         <Box>
-          <List className="folder-list">
+          <List style={{padding: 0}}>
             <ListItemButton
               selected={selectedFolder === 0}
               value=""

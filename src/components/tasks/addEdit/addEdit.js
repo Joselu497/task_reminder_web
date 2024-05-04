@@ -20,6 +20,9 @@ import moment from "moment";
 import { toast } from "react-toastify";
 import { postTask, putTask } from "../../../api/tasks";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { onLogout } from "../../../utils/logout";
 import RequiredInput from "../../utils/required-input/requiredInput";
 import PriorityRating from "../../utils/priority-rating/priorityRating";
 
@@ -28,6 +31,8 @@ import PriorityRating from "../../utils/priority-rating/priorityRating";
  * @type {React.FC<{isOpen: boolean, handleClose: Function, task: Object, currentFolderId: number, onCreate: Function}>}
  */
 const AddEditDialog = ({ isOpen, handleClose, task, currentFolderId, onCreate }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [title, setTitle] = useState(task?.title || "");
   const [description, setDescription] = useState(task?.description || "");
   const [deadlineDate, setDeadlineDate] = useState(
@@ -90,7 +95,11 @@ const AddEditDialog = ({ isOpen, handleClose, task, currentFolderId, onCreate })
       handleCloseDialog();
       toast.success(`Tarea ${task ? 'editada' : 'creada'}.`);
     } catch (error) {
+      if (error.response && error.response.status === 401) {
+        onLogout(navigate, dispatch);
+      } else {
       toast.error(`Error al ${task ? 'editar' : 'crear'} tarea.`);
+      }
     }
   };
 
