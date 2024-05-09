@@ -328,6 +328,7 @@ const Tasks = () => {
           </Box>
         )}
         <Pagination
+          style={{ marginRight: 40}}
           className="pagination-bar"
           count={pageCount}
           shape="rounded"

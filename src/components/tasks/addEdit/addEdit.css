@@ -22,11 +22,11 @@
 
 .task-date-time-picker {
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 66% 34%;
+    grid-column-gap: 0.3em;
 }
 
 .date-picker {
-    margin-right: 0.2em;
     grid-column: 1;
 }
 

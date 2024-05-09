@@ -43,7 +43,7 @@ const Register = () => {
   return (
     <Box className="register-container">
       <Box className="left-screen"></Box>
-      <Paper className="register-box">
+      <Paper variant="outlined" className="register-box">
         <Box className="register-banner">
           <AccountCircleOutlinedIcon color="primary" fontSize="large" />
           <Typography variant="h4">Registrarse</Typography>
