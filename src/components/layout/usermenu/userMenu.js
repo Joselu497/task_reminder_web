@@ -73,6 +73,8 @@ const UserMenu = ({ open, handleOpenUserMenu }) => {
           Copyright&copy; {new Date().getFullYear()},{" "}
           <Link
             href="https://github.com/Joselu497"
+            target="_blank" 
+            rel="noopener noreferrer"
           >
             Joselu497
           </Link>
